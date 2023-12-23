@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarker</title>
+    <link rel="shortcut icon" href="./2899445.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sytle/bootstrap.min.css">
+    <link rel="stylesheet" href="sytle/style.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="position-relative mb-5">
+
+            <h1 class="mx-auto   my-5 pt-5">Bookmarker </h1>
+            
+        </div>
+        
+
+        
+        <div class="main py-5">
+            <h2 class="text-center">Bookmark your favorite sites</h2>
+
+            <label for="siteName" class="fw-bold">Site name:</label>
+            <input type="text" id="siteName" oninput="validationName()  "  placeholder="enter site name here"  class="form-control  my-3" >
+            <div class="alert alert-danger d-none" id="nameAlert" oninput="validationName()"> <p>your site name must contain at least 3 and max 20 <b>character</b>  or  <b>number</b>  or <b> _ </b> only </p></div>
+
+            <label for="siteURL" class="fw-bold">Site URL:</label>
+            <input type="text" id="siteURL" oninput="validationLink()"  placeholder="enter site URL here" class="form-control  my-3" >
+            <div class="alert alert-danger d-none  " id="linkAlert" oninput="validationLink()"> <p>your URL must be like : <b>https://</b> sitename <b>.com</b> </p></div>
+            <div class="text-center mt-5">
+                <button class="btn btn-primary w-25" onclick=" addSite()">subimt</button>
+            </div>
+        </div>
+        <div>
+            <input type="text" id="searchSite" class="w-50 form-control mt-4 mx-auto" placeholder="search ...."  oninput="serachSite()" >
+            <table class="table text-center my-5">
+                <thead>
+                    <tr>
+                        <th> Index </th>
+                        <th> Website Name </th>
+                        <th> Visit </th>
+                        <th> Delete </th>
+                        
+                    </tr>
+                </thead>
+                <tbody id="siteTable">
+           
+                </tbody>
+
+            </table>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
